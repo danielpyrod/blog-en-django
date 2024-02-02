@@ -1,0 +1,26 @@
+{% load tailwind_tags %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+    
+    <link type='text/css' href="{% static 'estilos/styles.css' %}" rel="stylesheet">
+
+
+    <title>{% block title %}Blog Django{% endblock %}</title>
+</head>
+</head>
+<body>
+
+    {% block content %}
+    <div class="flex justify-center"  style="background-color: rgb(107, 189, 221);">
+        <h1 class="text-3xl text-indigo-700">Blog Django</h1>
+    </div>
+    {% endblock content %}
+
+    
+</body>
+
+</html>

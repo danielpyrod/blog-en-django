@@ -1,0 +1,76 @@
+body {
+    background-color: #e2e2e2;
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-grow: 1; /* Permite que el contenedor crezca para ocupar el espacio disponible */
+}
+
+
+
+.card-item {
+    width: 200px;
+    position: relative;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 20px 40px rgba(87, 84, 84, 0.328);
+}
+
+
+.card-item:hover {
+    transform: rotate(1deg);
+    box-shadow: 0 20px 40px rgba(16, 14, 14, 0.5);
+}
+
+.card-item.dimension-extra {
+    width: 600px; /* Aumenta el ancho de la tarjeta */
+    transform: none; 
+    position:fixed;
+    
+
+}
+
+/* Estilos para pantallas con un ancho máximo de 600px */
+
+/* Media queries para ajustar estilos en diferentes tamaños de pantalla */
+@media screen and (max-width: 768px) {
+    .container2 {
+        justify-content: center;
+    }
+
+    .card-item {
+        width: 100%;
+    }
+
+    .card-item.dimension-extra {
+        width: 100%;
+    }
+}
+
+
+.image {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.5s;
+    background-size: cover;
+    background-position: center center;
+}
+
+.title{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 2px;
+}
+
+.boton-login {
+    position: fixed;
+    bottom: 0;
+    left: 50%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centrar el botón */
+}

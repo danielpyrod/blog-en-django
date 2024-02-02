@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Blog - Entradas
+{% endblock %}
+
+{% block content %}
+
+    <div class="flex justify-center"  style="background-color: rgb(107, 189, 221);">
+        <h1 class="text-3xl text-indigo-700">Blog Django</h1>
+    </div>
+<br>
+
+    
+<div class="container2">
+    {% for post in posts %}
+        <div class="card-item">
+            <div class="image image1"><img src="{{ post.image.url }}" width="200" alt="{{ post.title }}"></div>
+            <div class="content">
+                <a class="title" href="{% url 'blog:detail' post.id %}" class="mb-2">{{ post.title }}</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+<div class="boton-login">
+<a class= "inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs front-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none" href="{% url 'blog:login' %}">Login</a>
+</div>
+
+
+
+
+
+
+
+
+{% endblock content %}
+

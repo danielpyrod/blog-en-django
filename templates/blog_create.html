@@ -1,0 +1,13 @@
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    {{ form.title.label_tag }} {{ form.title }}
+    <br>
+    {{ form.content.label_tag }} {{ form.content }}
+    <br>
+    {{ form.image.label_tag }} {{ form.image }}
+    
+    <button type="submit">Submit</button>
+</form>
+
+
